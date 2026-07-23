@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Portofolio Pribadi Mikail - Web Development & Mobile App Developer">
   <title>Mikail - Personal Portfolio</title>
-  
-  <!-- Google Fonts: Poppins (Heading) & Inter (Body) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
-  
-  <!-- FontAwesome CDN v5.6.3 -->
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-  
-  <!-- Main Stylesheet -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- FEATURE BACKGROUND LAYER FOR TOP-TO-BOTTOM PANNING & DRAMATIC SCROLL ZOOM -->
   <div class="feature" id="featureLayer"></div>
 
-  <!-- NAVBAR (Sticky Top Header) -->
   <header class="navbar-header">
     <div class="nav-container">
       <a href="#home" class="logo">Mikail</a>
-      
-      <!-- Checkbox Hack Toggle for Mobile -->
+
       <input type="checkbox" id="nav-toggle" class="nav-toggle">
       <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle Navigation">
         <span></span>
         <span></span>
         <span></span>
       </label>
-      
+
       <nav class="nav-menu">
         <ul class="nav-list">
           <li style="--i:#123358;--j:#2F80ED">
@@ -67,24 +66,24 @@
     </div>
   </header>
 
-  <!-- MAIN CONTENT STREAM -->
   <div class="content">
-    
-    <!-- HERO SECTION -->
+
     <section id="home" class="hero-section">
       <div class="hero-container">
         <div class="hero-text-content">
           <div class="hero-badge">Hi, I'm Mikail 👋</div>
           <h1 class="hero-title">Welcome to My Portfolio</h1>
           <p class="hero-subtext">
-            Fokus pada pengembangan web & aplikasi mobile modern dengan performa tinggi, efisiensi tinggi, dan tampilan interaktif.
+            Mahasiswa Teknologi Informasi ITS dengan ketertarikan mendalam pada Web & Mobile App Development,
+            Cybersecurity, IoT, hingga solusi Smart City. Berkomitmen untuk terus belajar dan berinovasi menciptakan
+            teknologi berdampak positif.
           </p>
           <div class="hero-buttons">
             <a href="#about" class="btn btn-solid-navy btn-fill-anim">About Me</a>
-            <a href="#projects" class="btn btn-outline-navy">View Projects</a>
+            <a href="#projects" class="btn btn-outline-navy btn-outline-anim">View Projects</a>
           </div>
         </div>
-        
+
         <div class="hero-visual">
           <div class="profile-image-container">
             <img src="assets/image/profile.jpg" alt="Foto Profil Mikail" class="profile-img">
@@ -93,94 +92,227 @@
       </div>
     </section>
 
-    <!-- ABOUT SECTION (HIGH CONTRAST DARK GLASS WRAPPER) -->
     <section id="about" class="about-section">
       <div class="about-card-wrapper">
         <div class="about-content">
-          <h2 class="about-title">Crafting Experiences with Purpose and Precision</h2>
+          <h2 class="about-title">"You don’t have to be great to start, but you have to start to be great."</h2>
           <p class="about-desc">
-            Saya adalah seorang mahasiswa dan pengembang perangkat lunak yang berdedikasi dalam membangun proyek web scraping/automation dengan Python serta aplikasi mobile dengan UI modern dan fungsi yang fungsional.
+            Saya adalah Mahasiswa Teknologi Informasi di Institut Teknologi Sepuluh Nopember (ITS) sekaligus alumni
+            Rekayasa Perangkat Lunak SMKN 2 Surakarta. Memiliki passion mendalam di dunia teknologi, saya percaya bahwa
+            inovasi digital adalah kunci utama perubahan besar di masa depan. Selama perjalanan praktis dan akademis,
+            saya telah mengeksplorasi Web & Mobile App Development, UI/UX Design, hingga Internet of Things (IoT).
+            Jelajahi karya dan proyek pilihan saya pada bagian <a href="#projects"
+              style="color: var(--color-peach); text-decoration: underline; font-weight: 600;">"Featured Projects"</a>
+            di bawah.
           </p>
-          
+
           <div class="about-stats">
             <div class="stat-card">
-              <span class="stat-number">3+</span>
+              <span class="stat-number">10+</span>
               <span class="stat-label">Proyek Dibangun</span>
             </div>
             <div class="stat-card">
-              <span class="stat-number">2+</span>
+              <span class="stat-number">3+</span>
               <span class="stat-label">Tahun Belajar</span>
             </div>
           </div>
+
+          <div class="about-timeline-grid">
+            <div class="timeline-column">
+              <h3 class="timeline-column-title"><i class="fas fa-graduation-cap"></i> Riwayat Pendidikan</h3>
+              <div class="timeline-items">
+                <div class="timeline-item">
+                  <span class="timeline-date">2026 - Sekarang</span>
+                  <h4 class="timeline-title">Institut Teknologi Sepuluh Nopember</h4>
+                  <p class="timeline-subtitle">Teknologi Informasi</p>
+                  <p class="timeline-desc">Diterima melalui jalur SNBT (Seleksi Nasional Berbasis Tes) dengan skor 696.
+                    Berkomitmen untuk terus mengasah keterampilan teknis, memperluas wawasan akademis, serta membangun
+                    jaringan relasi yang kuat selama masa perkuliahan.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-date">2023 - 2026</span>
+                  <h4 class="timeline-title">SMKN 2 Surakarta</h4>
+                  <p class="timeline-subtitle">Rekayasa Perangkat Lunak</p>
+                  <p class="timeline-desc">Fokus mendalami pengembangan perangkat lunak dan dasar-dasar pemrograman di
+                    tengah pesatnya perkembangan teknologi AI. Aktif sebagai Pengurus OSIS yang merancang berbagai
+                    program kerja strategis, sekaligus membangun fondasi pemrograman yang solid untuk dikembangkan di
+                    jenjang perguruan tinggi.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-column">
+              <h3 class="timeline-column-title"><i class="fas fa-briefcase"></i> Pengalaman Kerja & Organisasi</h3>
+              <div class="timeline-items">
+                <div class="timeline-item">
+                  <span class="timeline-date">2023 - 2026</span>
+                  <h4 class="timeline-title">OSIS SMKN 2 Surakarta</h4>
+                  <p class="timeline-subtitle">Seksi Bidang 4: Pembinaan Prestasi Akademik, Seni, Olahraga dan Ilmiah
+                  </p>
+                  <p class="timeline-desc">Bertanggung jawab dalam membina serta mengarahkan siswa berprestasi di bidang
+                    Akademik maupun Non-Akademik agar dapat mengoptimalkan potensi dan bakat mereka secara maksimal.
+                    Selain itu, saya memprakarsai penyelenggaraan Turnamen E-Sport tingkat sekolah dan berperan penting
+                    dalam mendirikan Ekstrakurikuler E-Sport sebagai wadah resmi penyaluran minat siswa secara positif
+                    dan kompetitif.</p>
+                </div>
+                <div class="timeline-item">
+                  <span class="timeline-date">Juli 2025 – Januari 2026</span>
+                  <h4 class="timeline-title">CV MIB LABS</h4>
+                  <p class="timeline-subtitle">Junior Developer & Web Tester</p>
+                  <p class="timeline-desc">Selama 6 bulan masa magang, saya mendalami aspek pengembangan web modern
+                    sekaligus bertindak sebagai Web Tester. Berperan aktif dalam menjamin kualitas (Quality Assurance)
+                    dan pengujian fungsionalitas sistem sebelum proses deployment publik. Proyek utama yang ditangani
+                    meliputi SPIK (Sistem Perencanaan Integrasi Keuangan) Kabupaten Kudus, Platform Pelatihan Karyawan
+                    Perusahaan Rokok Sukun, serta berbagai platform sistem web lainnya.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-    <!-- FEATURED PROJECTS SECTION -->
     <section id="projects" class="disciplines-section">
       <div class="disciplines-container">
         <div class="section-header">
           <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Beberapa proyek utama yang telah saya bangun</p>
+          <p class="section-subtitle">Koleksi proyek web, aplikasi mobile, game, dan eksperimentasi teknologi yang telah
+            saya bangun</p>
         </div>
-        
-        <div class="disciplines-cards">
-          <!-- Project 1: Peramal Cuaca -->
-          <div class="discipline-card">
-            <div class="card-icon">
-              <i class="fas fa-cloud-sun"></i>
+
+        <div class="projects-slider-wrapper">
+          <button class="slider-arrow prev-arrow" id="prevProjectsBtn" aria-label="Project Sebelumnya">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <div class="disciplines-cards-slider" id="projectsSlider">
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fas fa-cloud-sun"></i>
+              </div>
+              <h3 class="card-title">Peramal Cuaca</h3>
+              <p class="card-desc">
+                Aplikasi perkiraan cuaca interaktif berbasis web dengan data visualisasi yang akurat, cepat, dan
+                tampilan yang modern.
+              </p>
+              <a href="https://ayoramal-mage12.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">
+                Lihat Demo <i class="fas fa-external-link-alt"></i>
+              </a>
             </div>
-            <h3 class="card-title">Peramal Cuaca</h3>
-            <p class="card-desc">
-              Aplikasi perkiraan cuaca interaktif berbasis web dengan data visualisasi yang akurat, cepat, dan tampilan yang modern.
-            </p>
-            <a href="https://ayoramal-mage12.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">
-              Lihat Demo <i class="fas fa-external-link-alt"></i>
-            </a>
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fas fa-wallet"></i>
+              </div>
+              <h3 class="card-title">Aplikasi Catatan Keuangan</h3>
+              <p class="card-desc">
+                Aplikasi manajemen keuangan pribadi untuk mencatat transaksi harian, kategori anggaran, serta grafik
+                laporan bulanan.
+              </p>
+              <a href="https://github.com/mikaillauranaotwsukses/Apliaksi_Keuangan" target="_blank"
+                rel="noopener noreferrer" class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fas fa-desktop"></i>
+              </div>
+              <h3 class="card-title">Daily Reminder (PC)</h3>
+              <p class="card-desc">
+                Aplikasi pengingat harian desktop untuk membantu mengatur jadwal tugas, reminder otomatis, dan
+                meningkatkan produktivitas.
+              </p>
+              <a href="https://github.com/mikaillauranaotwsukses/daily-reminder" target="_blank"
+                rel="noopener noreferrer" class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fas fa-tasks"></i>
+              </div>
+              <h3 class="card-title">Aplikasi Drill Soal</h3>
+              <p class="card-desc">
+                Aplikasi interaktif yang dirancang untuk latihan dan simulasi pengerjaan soal-soal secara intensif guna
+                meningkatkan pemahaman dan kesiapan ujian.
+              </p>
+              <a href="https://github.com/Mikail-Laurana/Project-DrillSoal" target="_blank" rel="noopener noreferrer"
+                class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fab fa-chrome"></i>
+              </div>
+              <h3 class="card-title">YouTube Word Bingo</h3>
+              <p class="card-desc">
+                Ekstensi Chrome inovatif yang mendeteksi kata-kata dari audio video YouTube secara otomatis untuk
+                dijadikan permainan Bingo interaktif.
+              </p>
+              <a href="https://github.com/mikaillauranaotwsukses/Fun-BingoGame" target="_blank"
+                rel="noopener noreferrer" class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="discipline-card">
+              <div class="card-icon">
+                <i class="fas fa-gamepad"></i>
+              </div>
+              <h3 class="card-title">Catfish Evolution</h3>
+              <p class="card-desc">
+                Game berbasis Python dengan mekanisme gameplay saling memangsa, di mana pemain mengendalikan karakter
+                ikan (Catfish) untuk tumbuh membesar dan meraih skor tertinggi.
+              </p>
+              <a href="https://github.com/Mikail-Laurana/Catfish-Evolution" target="_blank" rel="noopener noreferrer"
+                class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
+            <div class="discipline-card">
+              <div class="card-badge">PROTOTYPE</div>
+              <div class="card-icon">
+                <i class="fas fa-images"></i>
+              </div>
+              <h3 class="card-title">Galeri Bersama Kamu</h3>
+              <p class="card-desc">
+                Prototype aplikasi galeri kenangan untuk menyimpan dan mengorganisir foto-foto berkesan agar mudah
+                ditemukan dan diakses kapan saja.
+              </p>
+              <a href="https://github.com/Mikail-Laurana/GaleriBersamaKamu" target="_blank" rel="noopener noreferrer"
+                class="card-link">
+                Repository GitHub <i class="fab fa-github"></i>
+              </a>
+            </div>
+
           </div>
 
-          <!-- Project 2: Catatan Keuangan -->
-          <div class="discipline-card">
-            <div class="card-icon">
-              <i class="fas fa-wallet"></i>
-            </div>
-            <h3 class="card-title">Aplikasi Catatan Keuangan</h3>
-            <p class="card-desc">
-              Aplikasi manajemen keuangan pribadi untuk mencatat transaksi harian, kategori anggaran, serta grafik laporan bulanan.
-            </p>
-            <a href="https://github.com/mikaillauranaotwsukses/Apliaksi_Keuangan" target="_blank" rel="noopener noreferrer" class="card-link">
-              Repository GitHub <i class="fab fa-github"></i>
-            </a>
-          </div>
-
-          <!-- Project 3: Daily Reminder (PC) -->
-          <div class="discipline-card">
-            <div class="card-icon">
-              <i class="fas fa-desktop"></i>
-            </div>
-            <h3 class="card-title">Daily Reminder (PC)</h3>
-            <p class="card-desc">
-              Aplikasi pengingat harian desktop untuk membantu mengatur jadwal tugas, reminder otomatis, dan meningkatkan produktivitas.
-            </p>
-            <a href="https://github.com/mikaillauranaotwsukses/daily-reminder" target="_blank" rel="noopener noreferrer" class="card-link">
-              Repository GitHub <i class="fab fa-github"></i>
-            </a>
-          </div>
+          <button class="slider-arrow next-arrow" id="nextProjectsBtn" aria-label="Project Selanjutnya">
+            <i class="fas fa-chevron-right"></i>
+          </button>
         </div>
+
       </div>
     </section>
 
   </div>
 
-  <!-- FOOTER SECTION (FULL SCREEN WIDTH - EDGE TO EDGE) -->
   <footer id="contact" class="site-footer">
     <div class="footer-container">
       <div class="footer-top">
         <div class="footer-brand">
           <a href="#home" class="footer-logo">Mikail</a>
-          <p class="footer-tagline">Building digital products with purpose and precision.</p>
+          <p class="footer-tagline">Keep Learning Keep Growing</p>
         </div>
-        
+
         <ul class="footer-nav">
           <li><a href="#">Privacy Policy</a></li>
           <li><a href="#">Terms</a></li>
@@ -190,10 +322,13 @@
 
       <div class="footer-middle">
         <ul class="social-icons">
-          <li><a href="https://github.com/mikaillauranaotwsukses" target="_blank" aria-label="GitHub"><i class="fab fa-github icon"></i></a></li>
-          <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in icon"></i></a></li>
-          <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram icon"></i></a></li>
-          <li><a href="mailto:mikail@example.com" aria-label="Email"><i class="fas fa-envelope icon"></i></a></li>
+          <li><a href="https://github.com/mikaillauranaotwsukses" target="_blank" aria-label="GitHub"><i
+                class="fab fa-github icon"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/muhammad-mikail-721b202b7/" aria-label="LinkedIn"><i
+                class="fab fa-linkedin-in icon"></i></a></li>
+          <li><a href="https://www.instagram.com/mikailmiko19/" aria-label="Instagram"><i
+                class="fab fa-instagram icon"></i></a></li>
+          <li><a href="mailto:mikailcoding64@gmail.com" aria-label="Email"><i class="fas fa-envelope icon"></i></a></li>
         </ul>
       </div>
 
@@ -203,44 +338,130 @@
     </div>
   </footer>
 
-  <!-- DRAMATIC TOP-TO-BOTTOM PANNING & ZOOM SCROLL SCRIPT -->
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const feature = document.getElementById('featureLayer');
-      if (!feature) return;
+      if (feature) {
+        function onScroll() {
+          const fromTop = window.pageYOffset || document.documentElement.scrollTop;
+          const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = Math.min(1, Math.max(0, fromTop / docHeight));
 
-      function onScroll() {
-        const fromTop = window.pageYOffset || document.documentElement.scrollTop;
-        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const progress = Math.min(1, Math.max(0, fromTop / docHeight));
+          const scaleVal = (1.45 - (progress * 0.45)).toFixed(3);
+          const posPercent = (10 + (progress * 70)).toFixed(1);
+          const blurVal = (progress * 10).toFixed(2);
 
-        // 1. Pronounced Zoom Out from 1.45 (145%) down to 1.0 (100%)
-        const scaleVal = (1.45 - (progress * 0.45)).toFixed(3);
-        
-        // 2. Top-to-Bottom Panning (10% top -> 80% bottom of photo)
-        const posPercent = (10 + (progress * 70)).toFixed(1);
-        
-        // 3. Progressive Smooth Blur from 0px up to 10px
-        const blurVal = (progress * 10).toFixed(2);
-        
-        // 4. Smooth Opacity Fade Out Near Footer
-        let opacityVal = 1;
-        if (progress > 0.85) {
-          opacityVal = Math.max(0.15, 1 - ((progress - 0.85) * 5.5));
+          let opacityVal = 1;
+          if (progress > 0.85) {
+            opacityVal = Math.max(0.15, 1 - ((progress - 0.85) * 5.5));
+          }
+
+          feature.style.transform = 'scale(' + scaleVal + ')';
+          feature.style.webkitTransform = 'scale(' + scaleVal + ')';
+          feature.style.backgroundPosition = 'center ' + posPercent + '%';
+          feature.style.filter = 'blur(' + blurVal + 'px)';
+          feature.style.webkitFilter = 'blur(' + blurVal + 'px)';
+          feature.style.opacity = opacityVal.toString();
         }
 
-        feature.style.transform = 'scale(' + scaleVal + ')';
-        feature.style.webkitTransform = 'scale(' + scaleVal + ')';
-        feature.style.backgroundPosition = 'center ' + posPercent + '%';
-        feature.style.filter = 'blur(' + blurVal + 'px)';
-        feature.style.webkitFilter = 'blur(' + blurVal + 'px)';
-        feature.style.opacity = opacityVal.toString();
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
       }
 
-      window.addEventListener('scroll', onScroll, { passive: true });
-      onScroll();
+      const projectsSlider = document.getElementById('projectsSlider');
+      const prevProjectsBtn = document.getElementById('prevProjectsBtn');
+      const nextProjectsBtn = document.getElementById('nextProjectsBtn');
+
+      if (projectsSlider && prevProjectsBtn && nextProjectsBtn) {
+        initInfiniteProjectsSlider(projectsSlider, prevProjectsBtn, nextProjectsBtn);
+      }
+
+      function initInfiniteProjectsSlider(slider, prevBtn, nextBtn) {
+        const originalCards = Array.from(slider.children);
+        const totalOriginal = originalCards.length;
+        if (totalOriginal === 0) return;
+
+        function cloneCard(card) {
+          const clone = card.cloneNode(true);
+          clone.setAttribute('aria-hidden', 'true');
+          clone.querySelectorAll('a, button').forEach(function (el) {
+            el.setAttribute('tabindex', '-1');
+          });
+          return clone;
+        }
+
+        const fragBefore = document.createDocumentFragment();
+        originalCards.forEach(function (card) { fragBefore.appendChild(cloneCard(card)); });
+        slider.insertBefore(fragBefore, slider.firstElementChild);
+
+        const fragAfter = document.createDocumentFragment();
+        originalCards.forEach(function (card) { fragAfter.appendChild(cloneCard(card)); });
+        slider.appendChild(fragAfter);
+
+        let baseLeft = 0;
+        let setWidth = 0;
+
+        function measure() {
+          const firstOriginal = slider.children[totalOriginal];
+          const firstCloneAfter = slider.children[totalOriginal * 2];
+          baseLeft = firstOriginal.offsetLeft;
+          setWidth = firstCloneAfter.offsetLeft - firstOriginal.offsetLeft;
+        }
+
+        function jumpTo(left) {
+          const prevBehavior = slider.style.scrollBehavior;
+          slider.style.scrollBehavior = 'auto';
+          slider.scrollLeft = left;
+          requestAnimationFrame(function () {
+            slider.style.scrollBehavior = prevBehavior;
+          });
+        }
+
+        measure();
+        jumpTo(baseLeft);
+
+        let ticking = false;
+        slider.addEventListener('scroll', function () {
+          if (ticking) return;
+          ticking = true;
+          requestAnimationFrame(function () {
+            if (setWidth > 0) {
+              if (slider.scrollLeft < baseLeft) {
+                jumpTo(slider.scrollLeft + setWidth);
+              } else if (slider.scrollLeft >= baseLeft + setWidth) {
+                jumpTo(slider.scrollLeft - setWidth);
+              }
+            }
+            ticking = false;
+          });
+        }, { passive: true });
+
+        function getStep() {
+          const a = slider.children[totalOriginal];
+          const b = slider.children[totalOriginal + 1];
+          return (a && b) ? (b.offsetLeft - a.offsetLeft) : 360;
+        }
+
+        nextBtn.addEventListener('click', function () {
+          slider.scrollBy({ left: getStep(), behavior: 'smooth' });
+        });
+
+        prevBtn.addEventListener('click', function () {
+          slider.scrollBy({ left: -getStep(), behavior: 'smooth' });
+        });
+
+        let resizeTimer;
+        window.addEventListener('resize', function () {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(function () {
+            measure();
+            jumpTo(baseLeft);
+          }, 200);
+        });
+      }
     });
   </script>
 
 </body>
+
 </html>
