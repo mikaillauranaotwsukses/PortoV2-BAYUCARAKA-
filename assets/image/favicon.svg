@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Logo Mikail">
+  <title>Mikail</title>
+
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#56CCF2"/>
+      <stop offset="100%" stop-color="#2F80ED"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Latar navy dengan sudut membulat -->
+  <rect width="64" height="64" rx="14" ry="14" fill="#123358"/>
+
+  <!-- Aksen cyan lembut di sudut kiri atas -->
+  <path d="M0 16 C0 7 7 0 16 0 L32 0 C21 5 9 15 4 26 L0 26 Z" fill="url(#accent)" opacity="0.5"/>
+
+  <!-- Monogram M (peach) -->
+  <path d="M14 44 L14 20 L20 20 L32 35 L44 20 L50 20 L50 44 L44.6 44 L44.6 30 L34.6 42.4 L29.4 42.4 L19.4 30 L19.4 44 Z"
+        fill="#FFECE1"/>
+
+  <!-- Garis bawah aksen gradient sebagai aksen developer -->
+  <rect x="22" y="49" width="20" height="3.4" rx="1.7" fill="url(#accent)"/>
+</svg>

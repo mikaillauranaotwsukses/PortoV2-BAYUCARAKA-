@@ -7,6 +7,10 @@
   <meta name="description" content="Portofolio Pribadi Mikail - Web Development & Mobile App Developer">
   <title>Mikail - Personal Portfolio</title>
 
+  <!-- Favicon / Logo Tab -->
+  <link rel="icon" type="image/svg+xml" href="assets/image/favicon.svg">
+  <meta name="theme-color" content="#123358">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -71,7 +75,7 @@
     <section id="home" class="hero-section">
       <div class="hero-container">
         <div class="hero-text-content">
-          <div class="hero-badge">Hi, I'm Mikail 👋</div>
+          <div class="hero-badge">Hi, I'm Mikail &#128075;</div>
           <h1 class="hero-title">Welcome to My Portfolio</h1>
           <p class="hero-subtext">
             Mahasiswa Teknologi Informasi ITS dengan ketertarikan mendalam pada Web & Mobile App Development,
@@ -95,7 +99,7 @@
     <section id="about" class="about-section">
       <div class="about-card-wrapper">
         <div class="about-content">
-          <h2 class="about-title">"You don’t have to be great to start, but you have to start to be great."</h2>
+          <h2 class="about-title">"You don&rsquo;t have to be great to start, but you have to start to be great."</h2>
           <p class="about-desc">
             Saya adalah Mahasiswa Teknologi Informasi di Institut Teknologi Sepuluh Nopember (ITS) sekaligus alumni
             Rekayasa Perangkat Lunak SMKN 2 Surakarta. Memiliki passion mendalam di dunia teknologi, saya percaya bahwa
@@ -156,7 +160,7 @@
                     dan kompetitif.</p>
                 </div>
                 <div class="timeline-item">
-                  <span class="timeline-date">Juli 2025 – Januari 2026</span>
+                  <span class="timeline-date">Juli 2025 &ndash; Januari 2026</span>
                   <h4 class="timeline-title">CV MIB LABS</h4>
                   <p class="timeline-subtitle">Junior Developer & Web Tester</p>
                   <p class="timeline-desc">Selama 6 bulan masa magang, saya mendalami aspek pengembangan web modern
@@ -173,133 +177,269 @@
       </div>
     </section>
 
-    <section id="projects" class="disciplines-section">
-      <div class="disciplines-container">
-        <div class="section-header">
-          <h2 class="section-title">Featured Projects</h2>
-          <p class="section-subtitle">Koleksi proyek web, aplikasi mobile, game, dan eksperimentasi teknologi yang telah
-            saya bangun</p>
+    <section id="projects" class="disciplines-section projects-section">
+      <!-- Tinggi section ini yang menentukan seberapa lama stage ter-pin.
+           Bertambah otomatis lewat JS sesuai jumlah project. -->
+      <div class="projects-pin-wrap" id="projectsPinWrap">
+
+        <div class="projects-stage" id="projectsStage">
+          <div class="projects-card">
+            <div class="disciplines-container projects-stage-inner">
+
+              <!-- ===== Header: judul kiri, nomor kanan (diam saat scroll) ===== -->
+              <div class="projects-head">
+                <div class="projects-head-title">
+                  <h2 class="projects-heading">Featured Projects</h2>
+                  <p class="section-subtitle">Koleksi proyek web, aplikasi mobile, game, dan eksperimentasi teknologi yang
+                    telah saya bangun</p>
+                </div>
+
+                <div class="projects-counter" id="projectsCounter" aria-hidden="true">
+                  <span class="counter-item is-active">01</span>
+                  <span class="counter-item">02</span>
+                  <span class="counter-item">03</span>
+                  <span class="counter-item">04</span>
+                  <span class="counter-item">05</span>
+                  <span class="counter-item">06</span>
+                  <span class="counter-item">07</span>
+                </div>
+              </div>
+
+            <!-- ===== Tumpukan project: berganti satu per satu ===== -->
+            <div class="projects-stack" id="projectsStack">
+
+              <!-- ==== PROJECT 1: ARA 8.0 ==== -->
+              <article class="project-slide is-active">
+                <a href="https://ara-its.id" target="_blank" rel="noopener noreferrer" class="project-thumb"
+                  aria-label="Kunjungi situs ARA 8.0">
+                  <img src="assets/image/projects/ara-its.png" alt="Tampilan situs ARA 8.0" class="project-img"
+                    loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Event Website</span>
+                    <h3 class="project-title">ARA 8.0</h3>
+                    <p class="project-desc">
+                      Website resmi A Renewal Agent 8.0, event tahunan HMIT ITS, dengan tiga cabang kompetisi (OlimpIT,
+                      Capture The Flag, dan Data Science) lengkap dengan alur registrasi peserta.
+                    </p>
+                    <a href="https://ara-its.id" target="_blank" rel="noopener noreferrer" class="project-link">Kunjungi
+                      Situs <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 2: INI LHO ITS! ==== -->
+              <article class="project-slide">
+                <a href="https://inilho.its.ac.id" target="_blank" rel="noopener noreferrer" class="project-thumb"
+                  aria-label="Kunjungi situs INI LHO ITS!">
+                  <img src="assets/image/projects/inilho-its.png" alt="Tampilan situs INI LHO ITS!" class="project-img"
+                    loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Event Website</span>
+                    <h3 class="project-title">INI LHO ITS!</h3>
+                    <p class="project-desc">
+                      Website ajang promosi ITS tahunan yang memperkenalkan fakultas, jurusan, dan kehidupan kampus,
+                      meliputi Open Campus, ITS Fair, hingga pendaftaran Try Out Sepuluh Nopember.
+                    </p>
+                    <a href="https://inilho.its.ac.id" target="_blank" rel="noopener noreferrer"
+                      class="project-link">Kunjungi Situs <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 3: PETROLIDA ==== -->
+              <article class="project-slide">
+                <a href="https://petrolida.com" target="_blank" rel="noopener noreferrer" class="project-thumb"
+                  aria-label="Kunjungi situs PETROLIDA">
+                  <img src="assets/image/projects/petrolida.png" alt="Tampilan situs PETROLIDA" class="project-img"
+                    loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Event Website</span>
+                    <h3 class="project-title">PETROLIDA</h3>
+                    <p class="project-desc">
+                      Website event PETROLIDA dengan halaman pendaftaran Petro Run, dirancang untuk menyampaikan
+                      rangkaian acara dan memudahkan peserta melakukan registrasi secara online.
+                    </p>
+                    <a href="https://petrolida.com" target="_blank" rel="noopener noreferrer"
+                      class="project-link">Kunjungi Situs <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 4: HMIT ITS ==== -->
+              <article class="project-slide">
+                <a href="https://hmit-its.org" target="_blank" rel="noopener noreferrer" class="project-thumb"
+                  aria-label="Kunjungi situs HMIT ITS">
+                  <img src="assets/image/projects/hmit-its.png" alt="Tampilan situs HMIT ITS" class="project-img"
+                    loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Organization Website</span>
+                    <h3 class="project-title">HMIT ITS</h3>
+                    <p class="project-desc">
+                      Website resmi Himpunan Mahasiswa Teknologi Informasi ITS, memuat profil kabinet, visi misi,
+                      departemen, program kerja, hingga portal lomba dan blog dalam satu platform terpadu.
+                    </p>
+                    <a href="https://hmit-its.org" target="_blank" rel="noopener noreferrer" class="project-link">Kunjungi
+                      Situs <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 5: NAPAS ==== -->
+              <article class="project-slide">
+                <a href="https://github.com/bahyra26/napas" target="_blank" rel="noopener noreferrer"
+                  class="project-thumb" aria-label="Lihat repository NAPAS">
+                  <img src="assets/image/projects/napas.png" alt="Tampilan aplikasi NAPAS" class="project-img"
+                    loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Web App, React</span>
+                    <h3 class="project-title">NAPAS</h3>
+                    <p class="project-desc">
+                      Radar burnout mahasiswa yang menggabungkan pemindaian beban tugas, sensor kedipan mata on-device,
+                      dan pemantauan fokus menjadi Burnout Index (0&ndash;100) yang transparan, dilengkapi intervensi
+                      relaksasi dan wellness playbook.
+                    </p>
+                    <a href="https://github.com/bahyra26/napas" target="_blank" rel="noopener noreferrer"
+                      class="project-link">Repository GitHub <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 6: Peramal Cuaca ==== -->
+              <article class="project-slide">
+                <a href="https://ayoramal-mage12.vercel.app/" target="_blank" rel="noopener noreferrer"
+                  class="project-thumb" aria-label="Lihat demo Peramal Cuaca">
+                  <img src="assets/image/projects/peramal-cuaca.png" alt="Tampilan aplikasi Peramal Cuaca"
+                    class="project-img" loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Web Development</span>
+                    <h3 class="project-title">Peramal Cuaca</h3>
+                    <p class="project-desc">
+                      Aplikasi perkiraan cuaca interaktif berbasis web dengan data visualisasi yang akurat, cepat, dan
+                      tampilan yang modern.
+                    </p>
+                    <a href="https://ayoramal-mage12.vercel.app/" target="_blank" rel="noopener noreferrer"
+                      class="project-link">Lihat Demo <i class="fas fa-external-link-alt"></i></a>
+                  </div>
+                </div>
+              </article>
+
+              <!-- ==== PROJECT 7: Aplikasi Catatan Keuangan ==== -->
+              <article class="project-slide">
+                <a href="https://github.com/mikaillauranaotwsukses/Apliaksi_Keuangan" target="_blank"
+                  rel="noopener noreferrer" class="project-thumb" aria-label="Lihat repository Aplikasi Catatan Keuangan">
+                  <img src="assets/image/projects/catatan-keuangan.png" alt="Tampilan aplikasi Dompetku catatan keuangan"
+                    class="project-img" loading="lazy">
+                </a>
+                <div class="project-meta">
+                  <div class="project-meta-main">
+                    <span class="project-tag">Web App</span>
+                    <h3 class="project-title">Aplikasi Catatan Keuangan</h3>
+                    <p class="project-desc">
+                      Aplikasi manajemen keuangan pribadi untuk mencatat transaksi harian, kategori anggaran, serta grafik
+                      laporan bulanan.
+                    </p>
+                    <a href="https://github.com/mikaillauranaotwsukses/Apliaksi_Keuangan" target="_blank"
+                      rel="noopener noreferrer" class="project-link">Repository GitHub <i class="fab fa-github"></i></a>
+                  </div>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- Indikator progres scroll -->
+            <div class="projects-progress" aria-hidden="true">
+              <span class="projects-progress-bar" id="projectsProgressBar"></span>
+            </div>
+
+            </div>
+          </div>
         </div>
 
-        <div class="projects-slider-wrapper">
-          <button class="slider-arrow prev-arrow" id="prevProjectsBtn" aria-label="Project Sebelumnya">
-            <i class="fas fa-chevron-left"></i>
-          </button>
+      </div>
+    </section>
 
-          <div class="disciplines-cards-slider" id="projectsSlider">
+    <!-- ===== Certificates: galeri kartu yang membesar saat hover ===== -->
+    <section id="certificates" class="certificates-section">
+      <div class="certificates-card">
 
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fas fa-cloud-sun"></i>
-              </div>
-              <h3 class="card-title">Peramal Cuaca</h3>
-              <p class="card-desc">
-                Aplikasi perkiraan cuaca interaktif berbasis web dengan data visualisasi yang akurat, cepat, dan
-                tampilan yang modern.
-              </p>
-              <a href="https://ayoramal-mage12.vercel.app/" target="_blank" rel="noopener noreferrer" class="card-link">
-                Lihat Demo <i class="fas fa-external-link-alt"></i>
-              </a>
-            </div>
+        <div class="certificates-head">
+          <h2 class="certificates-heading">Certificates</h2>
+          <p class="section-subtitle">Sertifikat dan penghargaan yang saya peroleh dari kompetisi, pelatihan, dan
+            program pengembangan diri</p>
+        </div>
 
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fas fa-wallet"></i>
-              </div>
-              <h3 class="card-title">Aplikasi Catatan Keuangan</h3>
-              <p class="card-desc">
-                Aplikasi manajemen keuangan pribadi untuk mencatat transaksi harian, kategori anggaran, serta grafik
-                laporan bulanan.
-              </p>
-              <a href="https://github.com/mikaillauranaotwsukses/Apliaksi_Keuangan" target="_blank"
-                rel="noopener noreferrer" class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
+        <div class="certificates-layout">
 
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fas fa-desktop"></i>
-              </div>
-              <h3 class="card-title">Daily Reminder (PC)</h3>
-              <p class="card-desc">
-                Aplikasi pengingat harian desktop untuk membantu mengatur jadwal tugas, reminder otomatis, dan
-                meningkatkan produktivitas.
-              </p>
-              <a href="https://github.com/mikaillauranaotwsukses/daily-reminder" target="_blank"
-                rel="noopener noreferrer" class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fas fa-tasks"></i>
-              </div>
-              <h3 class="card-title">Aplikasi Drill Soal</h3>
-              <p class="card-desc">
-                Aplikasi interaktif yang dirancang untuk latihan dan simulasi pengerjaan soal-soal secara intensif guna
-                meningkatkan pemahaman dan kesiapan ujian.
-              </p>
-              <a href="https://github.com/Mikail-Laurana/Project-DrillSoal" target="_blank" rel="noopener noreferrer"
-                class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fab fa-chrome"></i>
-              </div>
-              <h3 class="card-title">YouTube Word Bingo</h3>
-              <p class="card-desc">
-                Ekstensi Chrome inovatif yang mendeteksi kata-kata dari audio video YouTube secara otomatis untuk
-                dijadikan permainan Bingo interaktif.
-              </p>
-              <a href="https://github.com/mikaillauranaotwsukses/Fun-BingoGame" target="_blank"
-                rel="noopener noreferrer" class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-
-            <div class="discipline-card">
-              <div class="card-icon">
-                <i class="fas fa-gamepad"></i>
-              </div>
-              <h3 class="card-title">Catfish Evolution</h3>
-              <p class="card-desc">
-                Game berbasis Python dengan mekanisme gameplay saling memangsa, di mana pemain mengendalikan karakter
-                ikan (Catfish) untuk tumbuh membesar dan meraih skor tertinggi.
-              </p>
-              <a href="https://github.com/Mikail-Laurana/Catfish-Evolution" target="_blank" rel="noopener noreferrer"
-                class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-
-            <div class="discipline-card">
-              <div class="card-badge">PROTOTYPE</div>
-              <div class="card-icon">
-                <i class="fas fa-images"></i>
-              </div>
-              <h3 class="card-title">Galeri Bersama Kamu</h3>
-              <p class="card-desc">
-                Prototype aplikasi galeri kenangan untuk menyimpan dan mengorganisir foto-foto berkesan agar mudah
-                ditemukan dan diakses kapan saja.
-              </p>
-              <a href="https://github.com/Mikail-Laurana/GaleriBersamaKamu" target="_blank" rel="noopener noreferrer"
-                class="card-link">
-                Repository GitHub <i class="fab fa-github"></i>
-              </a>
-            </div>
-
+          <!-- ===== Kiri: pratinjau gambar sertifikat (berubah saat hover) ===== -->
+          <div class="cert-preview" id="certPreview">
+            <!-- Gambar ditumpuk; hanya yang aktif yang terlihat -->
+            <img src="assets/image/certificates/example-certificate.png" alt="Contoh tampilan sertifikat"
+              class="cert-preview-img is-active" data-index="0" loading="lazy">
+            <img src="assets/image/certificates/example-certificate.png" alt="Contoh tampilan sertifikat"
+              class="cert-preview-img" data-index="1" loading="lazy">
+            <img src="assets/image/certificates/example-certificate.png" alt="Contoh tampilan sertifikat"
+              class="cert-preview-img" data-index="2" loading="lazy">
+            <img src="assets/image/certificates/example-certificate.png" alt="Contoh tampilan sertifikat"
+              class="cert-preview-img" data-index="3" loading="lazy">
           </div>
 
-          <button class="slider-arrow next-arrow" id="nextProjectsBtn" aria-label="Project Selanjutnya">
-            <i class="fas fa-chevron-right"></i>
-          </button>
-        </div>
+          <!-- ===== Kanan: daftar sertifikat ===== -->
+          <div class="cert-list" id="certList">
 
+            <!-- ==== SERTIFIKAT 1 ==== -->
+            <article class="cert-row is-active" tabindex="0" data-index="0">
+              <span class="cert-num">01</span>
+              <div class="cert-row-main">
+                <h3 class="cert-title">Nama Sertifikat</h3>
+                <p class="cert-issuer">Penerbit / Penyelenggara</p>
+              </div>
+              <span class="cert-year">2026</span>
+            </article>
+
+            <!-- ==== SERTIFIKAT 2 ==== -->
+            <article class="cert-row" tabindex="0" data-index="1">
+              <span class="cert-num">02</span>
+              <div class="cert-row-main">
+                <h3 class="cert-title">Nama Sertifikat</h3>
+                <p class="cert-issuer">Penerbit / Penyelenggara</p>
+              </div>
+              <span class="cert-year">2026</span>
+            </article>
+
+            <!-- ==== SERTIFIKAT 3 ==== -->
+            <article class="cert-row" tabindex="0" data-index="2">
+              <span class="cert-num">03</span>
+              <div class="cert-row-main">
+                <h3 class="cert-title">Nama Sertifikat</h3>
+                <p class="cert-issuer">Penerbit / Penyelenggara</p>
+              </div>
+              <span class="cert-year">2025</span>
+            </article>
+
+            <!-- ==== SERTIFIKAT 4 ==== -->
+            <article class="cert-row" tabindex="0" data-index="3">
+              <span class="cert-num">04</span>
+              <div class="cert-row-main">
+                <h3 class="cert-title">Nama Sertifikat</h3>
+                <p class="cert-issuer">Penerbit / Penyelenggara</p>
+              </div>
+              <span class="cert-year">2025</span>
+            </article>
+
+          </div>
+        </div>
       </div>
     </section>
 
@@ -307,19 +447,6 @@
 
   <footer id="contact" class="site-footer">
     <div class="footer-container">
-      <div class="footer-top">
-        <div class="footer-brand">
-          <a href="#home" class="footer-logo">Mikail</a>
-          <p class="footer-tagline">Keep Learning Keep Growing</p>
-        </div>
-
-        <ul class="footer-nav">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
       <div class="footer-middle">
         <ul class="social-icons">
           <li><a href="https://github.com/mikaillauranaotwsukses" target="_blank" aria-label="GitHub"><i
@@ -330,10 +457,6 @@
                 class="fab fa-instagram icon"></i></a></li>
           <li><a href="mailto:mikailcoding64@gmail.com" aria-label="Email"><i class="fas fa-envelope icon"></i></a></li>
         </ul>
-      </div>
-
-      <div class="footer-bottom">
-        <p>&copy; 2026 Mikail. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -368,98 +491,136 @@
         onScroll();
       }
 
-      const projectsSlider = document.getElementById('projectsSlider');
-      const prevProjectsBtn = document.getElementById('prevProjectsBtn');
-      const nextProjectsBtn = document.getElementById('nextProjectsBtn');
+      /* ==========================================================
+         Projects: stage ter-pin, project berganti mengikuti scroll
+         ========================================================== */
+      initProjectsPin();
 
-      if (projectsSlider && prevProjectsBtn && nextProjectsBtn) {
-        initInfiniteProjectsSlider(projectsSlider, prevProjectsBtn, nextProjectsBtn);
-      }
+      function initProjectsPin() {
+        const wrap = document.getElementById('projectsPinWrap');
+        const stage = document.getElementById('projectsStage');
+        const stack = document.getElementById('projectsStack');
+        const counter = document.getElementById('projectsCounter');
+        const progressBar = document.getElementById('projectsProgressBar');
+        if (!wrap || !stage || !stack) return;
 
-      function initInfiniteProjectsSlider(slider, prevBtn, nextBtn) {
-        const originalCards = Array.from(slider.children);
-        const totalOriginal = originalCards.length;
-        if (totalOriginal === 0) return;
+        const slides = Array.from(stack.querySelectorAll('.project-slide'));
+        const counters = counter ? Array.from(counter.querySelectorAll('.counter-item')) : [];
+        if (slides.length === 0) return;
 
-        function cloneCard(card) {
-          const clone = card.cloneNode(true);
-          clone.setAttribute('aria-hidden', 'true');
-          clone.querySelectorAll('a, button').forEach(function (el) {
-            el.setAttribute('tabindex', '-1');
-          });
-          return clone;
-        }
+        // Durasi satu project di layar (dalam kelipatan tinggi viewport)
+        const HOLD = 1; // 1 project = 1 x 100vh scroll
 
-        const fragBefore = document.createDocumentFragment();
-        originalCards.forEach(function (card) { fragBefore.appendChild(cloneCard(card)); });
-        slider.insertBefore(fragBefore, slider.firstElementChild);
-
-        const fragAfter = document.createDocumentFragment();
-        originalCards.forEach(function (card) { fragAfter.appendChild(cloneCard(card)); });
-        slider.appendChild(fragAfter);
-
-        let baseLeft = 0;
-        let setWidth = 0;
+        let activeIndex = -1;
+        let wrapTop = 0;
+        let scrollable = 0;
 
         function measure() {
-          const firstOriginal = slider.children[totalOriginal];
-          const firstCloneAfter = slider.children[totalOriginal * 2];
-          baseLeft = firstOriginal.offsetLeft;
-          setWidth = firstCloneAfter.offsetLeft - firstOriginal.offsetLeft;
+          // tinggi wrap = jumlah project x HOLD x 100vh
+          wrap.style.height = (slides.length * HOLD * 100) + 'vh';
+
+          const rect = wrap.getBoundingClientRect();
+          const scrollY = window.pageYOffset || document.documentElement.scrollTop;
+          wrapTop = rect.top + scrollY;
+          // jarak scroll saat stage masih menempel
+          scrollable = wrap.offsetHeight - window.innerHeight;
+          update();
         }
 
-        function jumpTo(left) {
-          const prevBehavior = slider.style.scrollBehavior;
-          slider.style.scrollBehavior = 'auto';
-          slider.scrollLeft = left;
-          requestAnimationFrame(function () {
-            slider.style.scrollBehavior = prevBehavior;
+        function setActive(index) {
+          if (index === activeIndex) return;
+          activeIndex = index;
+
+          slides.forEach(function (slide, i) {
+            slide.classList.toggle('is-active', i === index);
+          });
+
+          counters.forEach(function (item, i) {
+            item.classList.toggle('is-active', i === index);
           });
         }
 
-        measure();
-        jumpTo(baseLeft);
+        function update() {
+          var scrollY = window.pageYOffset || document.documentElement.scrollTop;
+          var offset = scrollY - wrapTop;
+
+          if (scrollable <= 0) return;
+
+          // progres 0..1 selama stage menempel
+          var progress = Math.min(1, Math.max(0, offset / scrollable));
+
+          // tentukan index aktif (dengan sedikit toleransi di ujung)
+          var index = Math.floor(progress * slides.length);
+          if (index >= slides.length) index = slides.length - 1;
+          if (index < 0) index = 0;
+          setActive(index);
+
+          if (progressBar) {
+            progressBar.style.width = (progress * 100).toFixed(2) + '%';
+          }
+        }
 
         let ticking = false;
-        slider.addEventListener('scroll', function () {
+        function onScroll() {
           if (ticking) return;
           ticking = true;
           requestAnimationFrame(function () {
-            if (setWidth > 0) {
-              if (slider.scrollLeft < baseLeft) {
-                jumpTo(slider.scrollLeft + setWidth);
-              } else if (slider.scrollLeft >= baseLeft + setWidth) {
-                jumpTo(slider.scrollLeft - setWidth);
-              }
-            }
+            update();
             ticking = false;
           });
-        }, { passive: true });
-
-        function getStep() {
-          const a = slider.children[totalOriginal];
-          const b = slider.children[totalOriginal + 1];
-          return (a && b) ? (b.offsetLeft - a.offsetLeft) : 360;
         }
 
-        nextBtn.addEventListener('click', function () {
-          slider.scrollBy({ left: getStep(), behavior: 'smooth' });
-        });
-
-        prevBtn.addEventListener('click', function () {
-          slider.scrollBy({ left: -getStep(), behavior: 'smooth' });
-        });
+        window.addEventListener('scroll', onScroll, { passive: true });
 
         let resizeTimer;
         window.addEventListener('resize', function () {
           clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(function () {
-            measure();
-            jumpTo(baseLeft);
-          }, 200);
+          resizeTimer = setTimeout(measure, 150);
         });
+
+        // gambar ulang saat font selesai dimuat (tinggi bisa berubah)
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(measure);
+        }
+
+        measure();
       }
+
+      /* ===== Certificates: hover baris mengganti gambar pratinjau ===== */
+      (function initCertificates() {
+        const list = document.getElementById('certList');
+        const preview = document.getElementById('certPreview');
+        if (!list || !preview) return;
+
+        const rows = Array.from(list.querySelectorAll('.cert-row'));
+        const images = Array.from(preview.querySelectorAll('.cert-preview-img'));
+        if (!rows.length || !images.length) return;
+
+        function activate(index) {
+          if (index < 0 || index >= rows.length) return;
+
+          rows.forEach((row, i) => row.classList.toggle('is-active', i === index));
+          images.forEach((img, i) => img.classList.toggle('is-active', i === index));
+        }
+
+        rows.forEach((row, i) => {
+          // hover
+          row.addEventListener('mouseenter', () => activate(i));
+          // keyboard: gulir baris ke dalam daftar agar tetap terlihat
+          row.addEventListener('focus', () => {
+            activate(i);
+            row.scrollIntoView({ block: 'nearest' });
+          });
+          // sentuh / klik (untuk layar sentuh)
+          row.addEventListener('click', () => activate(i));
+        });
+
+        // saat kursor keluar dari seluruh daftar, kembali ke item pertama
+        list.addEventListener('mouseleave', () => activate(0));
+      })();
+
     });
+
   </script>
 
 </body>

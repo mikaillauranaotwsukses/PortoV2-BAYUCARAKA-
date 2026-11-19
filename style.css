@@ -656,168 +656,355 @@ a {
   color: rgba(255, 255, 255, 0.88);
 }
 
-.projects-slider-wrapper {
+/* ==========================================================================
+   Projects: stage ter-pin (referensi: Our Achievements Bayucaraka ITS)
+   - Judul + nomor diam di atas, daftar project berganti satu per satu
+   - Tinggi .projects-pin-wrap diatur JS = jumlah project x 100vh
+   ========================================================================== */
+
+.projects-section {
   position: relative;
-  width: 100%;
+  z-index: 2;
+  /* padding & tinggi mengikuti pola .about-section */
+  padding: 20px 0 80px;
+  /* tanpa latar: latar diletakkan di .projects-card agar sama seperti kartu About */
+  background: none;
+  border: none;
+}
+
+/* Wadah setinggi scroll yang dibutuhkan untuk pergantian project */
+.projects-pin-wrap {
+  position: relative;
+  /* nilai awal; JS akan menimpanya */
+  height: 300vh;
+}
+
+/* Panel yang menempel (sticky) di layar selama scroll */
+.projects-stage {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  /* konten diizinkan memuai: tidak lagi terpotong */
+  overflow: visible;
+  padding: 20px 0;
+  box-sizing: border-box;
 }
 
-.disciplines-cards-slider {
-  display: flex;
-  gap: 24px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  padding: 24px 12px 36px;
+/* Kartu utama: memakai gaya identik dengan .about-card-wrapper */
+.projects-card {
   width: 100%;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-}
-
-.disciplines-cards-slider::-webkit-scrollbar {
-  display: none;
-}
-
-.disciplines-cards-slider .discipline-card {
-  flex: 0 0 calc(33.333% - 16px);
-  min-width: 320px;
-  max-width: 380px;
-}
-
-.disciplines-cards-slider:has(.discipline-card:hover) .discipline-card:not(:hover) {
-  filter: blur(3px);
-  opacity: 0.5;
-  transform: scale(0.97);
-}
-
-.discipline-card {
-  position: relative;
-  background: rgba(11, 26, 45, 0.84);
+  max-width: 1140px;
+  margin: 0 auto;
+  background: rgba(11, 26, 45, 0.82);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-radius: 20px;
-  padding: 40px 32px;
+  border-radius: 24px;
   border: 1px solid rgba(255, 236, 225, 0.2);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  padding: 44px 40px;
+  box-sizing: border-box;
+  /* batasi tinggi agar tetap di dalam viewport */
+  max-height: calc(100vh - 40px);
+  max-height: calc(100svh - 40px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+}
+
+.projects-stage-inner {
+  width: 100%;
+  max-height: 100%;
+  overflow: visible;
+  scrollbar-width: thin;
+  margin: 0 auto;
+  padding: 0;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 28px;
+  box-sizing: border-box;
+}
+
+/* --- Header: judul kiri, nomor kanan --- */
+.projects-head {
+  display: flex;
   align-items: flex-start;
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  justify-content: space-between;
+  gap: 32px;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
 }
 
-.discipline-card:hover {
-  filter: blur(0px);
-  opacity: 1;
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.55);
-  background: rgba(18, 51, 88, 0.94);
-  border-color: rgba(255, 236, 225, 0.45);
+.projects-head-title {
+  max-width: 620px;
 }
 
-.card-badge {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  background: rgba(255, 153, 102, 0.25);
-  color: #FF9966;
-  border: 1px solid rgba(255, 153, 102, 0.5);
-  font-size: 0.72rem;
-  font-weight: 800;
-  padding: 4px 10px;
-  border-radius: 20px;
-  letter-spacing: 0.08em;
+.projects-heading {
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
   text-transform: uppercase;
-}
-
-.slider-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: var(--color-peach);
-  color: var(--color-navy);
-  border: none;
-  font-size: 1.1rem;
-  cursor: pointer;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  transition: all 0.3s ease;
-}
-
-.slider-arrow:hover {
-  background: #ffffff;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 10px 25px rgba(255, 236, 225, 0.5);
-}
-
-.prev-arrow {
-  left: -20px;
-}
-
-.next-arrow {
-  right: -20px;
-}
-
-.card-icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 16px;
-  background-color: var(--color-peach);
-  color: var(--color-navy);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 26px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 14px rgba(255, 236, 225, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.discipline-card:hover .card-icon {
-  transform: scale(1.1) rotate(-4deg);
-}
-
-.card-title {
-  font-size: 1.35rem;
+  margin-bottom: 10px;
   color: var(--color-white);
-  margin-bottom: 14px;
-  line-height: 1.35;
+  white-space: nowrap;
 }
 
-.card-desc {
-  font-size: 0.96rem;
-  color: rgba(255, 255, 255, 0.88);
-  line-height: 1.65;
-  margin-bottom: 24px;
+.projects-head .section-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 48ch;
 }
 
-.card-link {
+/* Indikator nomor 01 / 02 / ... (menyesuaikan jumlah project) */
+.projects-counter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+.counter-item {
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding-bottom: 5px;
+  width: 30px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.3);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.18);
+  transition: color 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.counter-item.is-active {
+  color: var(--color-peach);
+  border-bottom-color: var(--color-peach);
+}
+
+/* --- Tumpukan project: semua slide menempati grid yang sama --- */
+.projects-stack {
+  display: grid;
+  flex: 1 1 auto;
+  min-height: 0;
+  align-items: center;
+}
+
+.project-slide {
+  grid-area: 1 / 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 40px;
+  /* keadaan tidak aktif */
+  opacity: 0;
+  transform: translateY(28px) scale(0.985);
+  visibility: hidden;
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.75s;
+  pointer-events: none;
+}
+
+.project-slide.is-active {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  transition-delay: 0s;
+  pointer-events: auto;
+}
+
+/* --- Thumbnail --- */
+.project-thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  /* dibatasi agar konten tetap muat di layar pendek */
+  max-height: 46vh;
+  justify-self: center;
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(11, 26, 45, 0.84);
+  border: 1px solid rgba(255, 236, 225, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: border-color 0.45s ease, box-shadow 0.45s ease;
+}
+
+.project-thumb:hover {
+  border-color: rgba(255, 236, 225, 0.45);
+  box-shadow: 0 24px 55px rgba(0, 0, 0, 0.55);
+}
+
+/* Gambar proyek */
+.project-img {
+  width: 100%;
+  height: 100%;
+  /* contain: seluruh UI terlihat utuh, tidak terpotong */
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.project-thumb:hover .project-img {
+  transform: scale(1.03);
+}
+
+/* --- Meta: teks di kanan thumbnail --- */
+.project-meta {
+  display: block;
+}
+
+.project-meta-main {
+  min-width: 0;
+}
+
+.project-tag {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-peach);
+  background: rgba(255, 236, 225, 0.1);
+  border: 1px solid rgba(255, 236, 225, 0.25);
+  padding: 5px 12px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+.project-title {
+  font-size: clamp(1.5rem, 2.6vw, 2.1rem);
+  line-height: 1.2;
+  margin-bottom: 12px;
+  color: var(--color-white);
+}
+
+.project-desc {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 42ch;
+}
+
+/* Tautan demo / repository di bawah deskripsi */
+.project-link {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin-top: auto;
+  margin-top: 18px;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
   font-weight: 700;
-  font-size: 0.94rem;
   color: var(--color-peach);
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.card-link i {
-  font-size: 0.85rem;
+.project-link i {
+  font-size: 0.82rem;
   transition: transform 0.3s ease;
 }
 
-.card-link:hover {
+.project-link:hover {
   color: #ffffff;
 }
 
-.card-link:hover i {
-  transform: translateX(4px);
+.project-link:hover i {
+  transform: translateX(3px);
+}
+
+/* --- Garis progres scroll --- */
+.projects-progress {
+  flex: 0 0 auto;
+  height: 2px;
+  width: 100%;
+  max-width: 320px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.projects-progress-bar {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: var(--color-peach);
+  border-radius: 2px;
+  transition: width 0.15s linear;
+}
+
+/* ===== Responsif ===== */
+@media (max-width: 1180px) {
+  .projects-card {
+    margin: 0 24px;
+  }
+}
+
+@media (max-width: 860px) {
+  .projects-card {
+    margin: 0 20px;
+    padding: 32px 24px;
+    max-height: calc(100vh - 32px);
+    max-height: calc(100svh - 32px);
+  }
+
+  .projects-stage {
+    padding: 16px 0;
+  }
+
+  .projects-stage-inner {
+    gap: 20px;
+  }
+
+  .project-slide {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    align-content: center;
+  }
+
+  .project-thumb {
+    aspect-ratio: 16 / 10;
+  }
+
+  .projects-head {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .projects-heading {
+    font-size: clamp(1.5rem, 6vw, 2rem);
+    white-space: normal;
+  }
+
+  .projects-head .section-subtitle {
+    font-size: 0.92rem;
+  }
+
+  .project-desc {
+    font-size: 0.92rem;
+    max-width: none;
+  }
+
+  .project-tag {
+    margin-bottom: 10px;
+  }
+
+  .projects-progress {
+    max-width: 100%;
+  }
+}
+
+/* Redam animasi bagi yang mengaktifkan reduce-motion */
+@media (prefers-reduced-motion: reduce) {
+  .project-slide {
+    transition-duration: 0.01s;
+  }
 }
 
 .site-footer {
@@ -826,7 +1013,7 @@ a {
   width: 100%;
   background-color: var(--color-footer-dark);
   color: var(--color-white);
-  padding: 70px 0 30px;
+  padding: 40px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   margin-top: 60px;
 }
@@ -836,57 +1023,13 @@ a {
   margin: 0 auto;
   padding: 0 24px;
   display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-
-.footer-top {
-  display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 24px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.footer-brand {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.footer-logo {
-  font-family: var(--font-heading);
-  font-size: 1.8rem;
-  font-weight: 800;
-  color: var(--color-white);
-}
-
-.footer-tagline {
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.footer-nav {
-  display: flex;
-  gap: 28px;
-  list-style: none;
-}
-
-.footer-nav a {
-  font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.footer-nav a:hover {
-  color: var(--color-peach);
 }
 
 .footer-middle {
   display: flex;
   justify-content: center;
-  padding: 10px 0;
 }
 
 ul.social-icons { 
@@ -949,12 +1092,6 @@ ul.social-icons li:nth-child(2) a:before { background: #0077b5; }
 ul.social-icons li:nth-child(3) a:before { background: #E4405F; }
 ul.social-icons li:nth-child(4) a:before { background: #123358; }
 
-.footer-bottom {
-  text-align: center;
-  font-size: 0.88rem;
-  color: rgba(255, 255, 255, 0.5);
-  padding-top: 10px;
-}
 
 @media (max-width: 1024px) {
   .hero-title {
@@ -1097,25 +1234,267 @@ ul.social-icons li:nth-child(4) a:before { background: #123358; }
     padding: 60px 0;
   }
 
-  .disciplines-cards {
-    flex-direction: column;
-    align-items: center;
+}
+
+/* ==========================================================================
+   Certificates
+   - Tata letak dua kolom: pratinjau besar (kiri) + daftar baris (kanan)
+   - Hover baris mana pun akan mengganti gambar pratinjau
+   - Gaya panel mengikuti .projects-card / .about-card-wrapper
+   ========================================================================== */
+
+.certificates-section {
+  position: relative;
+  z-index: 2;
+  padding: 20px 0 80px;
+  background: none;
+  border: none;
+}
+
+.certificates-card {
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  background: rgba(11, 26, 45, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 24px;
+  border: 1px solid rgba(255, 236, 225, 0.2);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.45);
+  padding: 44px 40px;
+  box-sizing: border-box;
+}
+
+/* --- Header --- */
+.certificates-head {
+  margin-bottom: 32px;
+}
+
+.certificates-heading {
+  font-size: clamp(1.6rem, 3.2vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--color-white);
+}
+
+.certificates-head .section-subtitle {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 52ch;
+}
+
+/* --- Tata letak dua kolom --- */
+.certificates-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+  gap: 32px;
+  align-items: start;
+}
+
+/* ===== Kiri: pratinjau ===== */
+.cert-preview {
+  /* relative wajib: gambar di dalamnya memakai position absolute */
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(7, 18, 32, 0.7);
+  border: 1px solid rgba(255, 236, 225, 0.16);
+}
+
+/* Gambar ditumpuk; hanya yang aktif terlihat */
+.cert-preview-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 0.45s ease, transform 0.55s cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+}
+
+.cert-preview-img.is-active {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+/* ===== Kanan: daftar baris ===== */
+.cert-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid rgba(255, 236, 225, 0.14);
+  /* daftar punya scroll sendiri bila sertifikat banyak */
+  max-height: 460px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* beri ruang agar border baris terakhir tidak menempel ke tepi */
+  padding-right: 6px;
+  /* scrollbar bertema */
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 236, 225, 0.35) transparent;
+  scroll-behavior: smooth;
+  overscroll-behavior: contain;
+}
+
+/* Scrollbar khusus WebKit/Chromium */
+.cert-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.cert-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.cert-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 236, 225, 0.28);
+  border-radius: 999px;
+}
+
+.cert-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 236, 225, 0.5);
+}
+
+.cert-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 14px;
+  border-bottom: 1px solid rgba(255, 236, 225, 0.14);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  transition: background 0.3s ease, padding-left 0.3s ease, border-color 0.3s ease;
+}
+
+/* Baris aktif / di-hover: latar menyala, teks jadi gelap */
+.cert-row:hover,
+.cert-row:focus-visible,
+.cert-row.is-active {
+  background: var(--color-peach);
+  border-color: var(--color-peach);
+  padding-left: 20px;
+}
+
+.cert-num {
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: rgba(255, 236, 225, 0.45);
+  transition: color 0.3s ease;
+}
+
+.cert-row-main {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.cert-title {
+  font-size: 1.02rem;
+  line-height: 1.35;
+  color: var(--color-white);
+  transition: color 0.3s ease;
+}
+
+.cert-issuer {
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.3s ease;
+}
+
+.cert-year {
+  flex: 0 0 auto;
+  font-family: var(--font-body);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-peach);
+  transition: color 0.3s ease;
+}
+
+/* Kontras teks saat baris aktif (latar peach terang) */
+.cert-row:hover .cert-num,
+.cert-row:focus-visible .cert-num,
+.cert-row.is-active .cert-num {
+  color: rgba(18, 51, 88, 0.55);
+}
+
+.cert-row:hover .cert-title,
+.cert-row:focus-visible .cert-title,
+.cert-row.is-active .cert-title {
+  color: var(--color-navy);
+}
+
+.cert-row:hover .cert-issuer,
+.cert-row:focus-visible .cert-issuer,
+.cert-row.is-active .cert-issuer {
+  color: rgba(18, 51, 88, 0.72);
+}
+
+.cert-row:hover .cert-year,
+.cert-row:focus-visible .cert-year,
+.cert-row.is-active .cert-year {
+  color: var(--color-navy);
+}
+
+/* --- Responsif: tumpuk pratinjau di atas daftar --- */
+@media only screen and (max-width: 56em) {
+  .certificates-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .discipline-card {
-    max-width: 100%;
-    width: 100%;
+  .cert-preview {
+    position: relative;
+    top: auto;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 36.25em) {
+  .certificates-section {
+    padding: 10px 0 60px;
   }
 
-  .footer-top {
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  .certificates-card {
+    padding: 30px 22px;
+    border-radius: 20px;
   }
 
-  .footer-nav {
-    flex-direction: column;
+  .cert-row {
+    padding: 14px 10px;
     gap: 12px;
-    align-items: center;
+  }
+
+  .cert-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* Hormati preferensi pengguna yang tidak ingin animasi */
+@media (prefers-reduced-motion: reduce) {
+  .cert-preview-img,
+  .cert-row {
+    transition: none;
+  }
+
+  .cert-preview-img {
+    transform: none;
+  }
+
+  .cert-preview-img.is-active {
+    transform: none;
   }
 }
